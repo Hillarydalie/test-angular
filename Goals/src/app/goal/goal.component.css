@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css?family=Crimson+Text|Kaushan+Script|Lexend+Deca&display=swap');
+
+h1 {
+	font-family: 'Lexend Deca', sans-serif;
+}
+
+li {
+	font-family: 'Crimson Text', sans-serif;
+}
+
+p {
+	color: red;
+}
