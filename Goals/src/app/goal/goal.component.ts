@@ -10,12 +10,12 @@ import { Goal } from '../goal';
 export class GoalComponent implements OnInit {
 
   goals: Goal[] = [
-    {id:1, name:'Watch finding Nemo',description:'Find an online version and watch merlin find his son'},
-    {id:2,name:'Buy Cookies',description:'I have to buy cookies for the parrot'},
-    {id:3,name:'Get new Phone Case',description:'Diana has her birthday coming up soon'},
-    {id:4,name:'Get Dog Food',description:'Pupper likes expensive sancks'},
-    {id:5,name:'Solve math homework',description:'Damn Math'},
-    {id:6,name:'Plot my world domination plan',description:'Cause I am an evil overlord'},
+    new Goal(1, 'Watch finding Nemo', 'Find an online version and watch merlin find his son'),
+    new Goal(2, 'Buy Cookies', 'I have to buy cookies for myself'),
+    new Goal(3, 'Get a new Phone Case', 'Diana has her birthday coming up'),
+    new Goal(4, 'Get shopping list', 'Need to stock in snacks for visitors'),
+    new Goal(5, 'Solve math homework', "I don't like math much"),
+    new Goal(6, 'Plot my world domination plan', "Cause I'm an  good"),
   ];
 
   toggleDetails(index){
