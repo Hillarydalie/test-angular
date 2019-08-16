@@ -10,12 +10,12 @@ import { Goal } from '../goal';
 export class GoalComponent implements OnInit {
 
   goals: Goal[] = [
-    new Goal(1, 'Watch finding Nemo', 'Find an online version and watch merlin find his son'),
-    new Goal(2, 'Buy Cookies', 'I have to buy cookies for myself'),
-    new Goal(3, 'Get a new Phone Case', 'Diana has her birthday coming up'),
-    new Goal(4, 'Get shopping list', 'Need to stock in snacks for visitors'),
-    new Goal(5, 'Solve math homework', "I don't like math much"),
-    new Goal(6, 'Plot my world domination plan', "Cause I'm an  good"),
+    new Goal(1, 'Watch finding Nemo', 'Find an online version and watch merlin find his son',new Date(2019,3,14)),
+    new Goal(2, 'Buy Cookies', 'I have to buy cookies for myself',new Date(2019,3,14)),
+    new Goal(3, 'Get a new Phone Case', 'Diana has her birthday coming up', new Date(2019,3,14)),
+    new Goal(4, 'Get shopping list', 'Need to stock in snacks for visitors', new Date(2019,3,14)),
+    new Goal(5, 'Solve math homework', "I don't like math much", new Date(2019,3,14)),
+    new Goal(6, 'Plot my world domination plan', "Cause I'm an  good", new Date(2019,3,14)),
   ];
 
   toggleDetails(index){
@@ -25,6 +25,16 @@ export class GoalComponent implements OnInit {
   completeGoal(isComplete, index){
     if (isComplete) {
       this.goals.splice(index,1);
+    }
+  }
+
+  deleteGoal(isComplete, index){
+    if (isComplete) {
+      let toDelete = confirm(`Are you sure you want to delete ${this.goals[index].name}?`)
+
+      if (toDelete){
+        this.goals.splice(index,1)
+      }
     }
   }
 
